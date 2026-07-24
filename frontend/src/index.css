@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Witcher theme mapped onto shadcn CSS variables */
+:root {
+  --radius: 0.625rem;
+
+  --background: #0f0b08;
+  --foreground: #e8e4df;
+
+  --card: #1a1410;
+  --card-foreground: #e8e4df;
+
+  --popover: #1a1410;
+  --popover-foreground: #e8e4df;
+
+  --primary: #c9a84c;
+  --primary-foreground: #0f0b08;
+
+  --secondary: #2a221c;
+  --secondary-foreground: #e8e4df;
+
+  --muted: #2a221c;
+  --muted-foreground: #8b9daf;
+
+  --accent: #2a221c;
+  --accent-foreground: #c9a84c;
+
+  --destructive: #8b2500;
+  --destructive-foreground: #f5e6e0;
+
+  --border: #3d342c;
+  --input: #3d342c;
+  --ring: #c9a84c;
+
+  --chart-1: #c9a84c;
+  --chart-2: #8b9daf;
+  --chart-3: #8b2500;
+  --chart-4: #6b8f71;
+  --chart-5: #a67c52;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Legacy witcher-* utilities used during migration */
+  --color-witcher-gold: #c9a84c;
+  --color-witcher-dark: #1a1410;
+  --color-witcher-darker: #0f0b08;
+  --color-witcher-silver: #8b9daf;
+  --color-witcher-red: #8b2500;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
