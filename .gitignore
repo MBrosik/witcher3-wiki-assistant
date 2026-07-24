@@ -1,0 +1,29 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ── Environment ──
+.env
+.env.local
+
+# ── Data ──
+data/raw/
+data/chroma_db/
+
+# ── Node ──
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── Docker ──
+docker-compose.override.yml
+
+# ── IDE ──
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
